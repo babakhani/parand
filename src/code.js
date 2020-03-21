@@ -44,6 +44,9 @@ const flipText = text => {
 }
 figma.ui.onmessage = function (msg) {
   if (msg.type === 'fakeit') {
+    if (figma.currentPage.selection.length === 0) {
+       figma.notify('Please select a text element !')
+    }
     for (const node of figma.currentPage.selection) {
       var allpromise = []
       let len = node.characters.length
