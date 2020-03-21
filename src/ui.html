@@ -1,0 +1,152 @@
+<h5> Lorem </h5>
+<button onclick="lorem()">
+  Lorem
+  <span>
+    Wordss
+    <span id="loremcountindicator" >10</span> 
+  </span>
+</button>
+<input
+        id="loremcount"
+        type="range"
+        max="200"
+        min="10"
+        step="5"
+        value="10" />
+<button onclick="faketit('random/number', true)">Number</button>
+
+<h5> Name </h5>
+<button onclick="faketit('name/firstName')">First Name</button>
+<button onclick="faketit('name/lastName')">Last Name</button>
+<button onclick="faketit('name/jobTitle')">Job Title</button>
+<button onclick="faketit('name/title')">Title</button>
+<h5> Phone </h5>
+<button onclick="faketit('phone/phoneNumber', true)">Phone</button>
+<button onclick="faketit('phone/phoneNumberFormat', true)">Phone Number Format</button>
+<button onclick="faketit('phone/phoneFormats', true)">Phone Formats</button>
+<!--<h5> Images </h5>-->
+<!--<button onclick="faketit('image/cats')">Cats</button>-->
+<h5> Date </h5>
+<!--<button onclick="faketit('date/future')">Date</button>-->
+<button onclick="faketit('date/month')">Month</button>
+<button onclick="faketit('date/weekday')">Weekday</button>
+<h5> Address </h5>
+<button onclick="faketit('address/country')">Country</button>
+<button onclick="faketit('address/countryCode')">Country Code</button>
+<!--<button onclick="faketit('address/city')">City</button>-->
+<button onclick="faketit('address/streetName')">Street</button>
+<button onclick="faketit('address/streetAddress')">Street Address</button>
+<!--<button onclick="faketit('address/latitude')">Latitude</button>-->
+<!--<button onclick="faketit('address/longitude')">Longitude</button>-->
+<h5> Company </h5>
+<!--<button onclick="faketit('company/suffixes')">suffixes</button>-->
+<button onclick="faketit('company/companySuffix')">companySuffix</button>
+<button onclick="faketit('company/catchPhrase')">catchPhrase</button>
+<button onclick="faketit('company/bs')">bs</button>
+<button onclick="faketit('company/catchPhraseAdjective')">catchPhraseAdjective</button>
+<button onclick="faketit('company/catchPhraseDescriptor')">catchPhraseDescriptor</button>
+<button onclick="faketit('company/catchPhraseNoun')">catchPhraseNoun</button>
+<button onclick="faketit('company/bsAdjective')">bsAdjective</button>
+<button onclick="faketit('company/bsBuzz')">bsBuzz</button>
+<button onclick="faketit('company/bsNoun')">bsNoun</button>
+<button onclick="faketit('company/companyName')">companyName</button>
+<h5> Commerce </h5>
+<button onclick="faketit('commerce/color')">Color</button>
+<button onclick="faketit('commerce/department')">Department</button>
+<button onclick="faketit('commerce/price', true)">price</button>
+<button onclick="faketit('commerce/product')">product</button>
+<button onclick="faketit('commerce/productName')">Product Name</button>
+<button onclick="faketit('commerce/productMaterial')">Product Material</button>
+<button onclick="faketit('commerce/productAdjective')">Product Adjective</button>
+<h5> Finance </h5>
+<!--<button onclick="faketit('finance/account', true)">Account</button>-->
+<!--<button onclick="faketit('finance/accountName')">Account Name</button>-->
+<!--<button onclick="faketit('finance/mask', true)">Mask</button>-->
+<button onclick="faketit('finance/amount', true)">Amount</button>
+<button onclick="faketit('finance/transactionType')">TransactionType</button>
+<button onclick="faketit('finance/currencyCode')">CurrencyCode</button>
+<button onclick="faketit('finance/currencyName')">CurrencyName</button>
+<button onclick="faketit('finance/currencySymbol', true)">CurrencySymbol</button>
+<!--<button onclick="faketit('finance/iban', true)">iban</button>-->
+<h5> Internet </h5>
+<button onclick="faketit('internet/color', true)">Color</button>
+<!--<button onclick="faketit('internet/email', true)">Email</button>-->
+<!--<button onclick="faketit('internet/exampleEmail', true)">exampleEmail</button>-->
+<!--<button onclick="faketit('internet/userName')">userName</button>-->
+<button onclick="faketit('internet/protocol', true)">protocol</button>
+<!--<button onclick="faketit('internet/domainName', true)">domainName</button>-->
+<button onclick="faketit('internet/domainSuffix', true)">domainSuffix</button>
+<!--<button onclick="faketit('internet/domainWord', true)">domainWord</button>-->
+<button onclick="faketit('internet/ip', true)">ip</button>
+<button onclick="faketit('internet/ipv6', true)">ipv6</button>
+<button onclick="faketit('internet/userAgent', true)">userAgent</button>
+<button onclick="faketit('internet/mac', true)">mac</button>
+<button onclick="faketit('internet/password', true)">password</button>
+<button onclick="faketit('random/boolean', true)">Boolean</button>
+<!--<button onclick="faketit('internet/url', true)">URL</button>-->
+
+<style>
+h5 {
+  font-family: tahoma, "Open Sans";
+  color: #999999;
+  margin-bottom: .4em;
+  font-weight: normal;
+  padding-bottom: .3em;
+}
+button {
+  display: block;
+  text-align: left;
+  text-indent: 0px;
+  width: 100%;
+  border-radius: 0;
+  border: 0;
+  font-size: .8em;
+  height: 46px;
+  line-height: 46px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+  button:hover,
+  button:active,
+  button:focus {
+    outline: 0 !important;
+    background: #f1f1f1;
+  }
+
+  input[type=range] {
+    width: 100%;
+  }
+
+  button > span{
+    display: block;
+    float: right;
+  }
+
+  button input {
+    width: 4em;
+    float: right;
+    height: 3em; !important
+      line-height: 3em;
+    margin-top: .5em;
+  }
+  button::disabled {
+    color: red !important;
+  }
+</style>
+<script>
+  const loremrange = document.getElementById('loremcount')
+  const loremcountindicator = document.getElementById('loremcountindicator')
+  loremrange.addEventListener('change', (event) => {
+    loremcountindicator.innerHTML = event.target.value
+    return faketit('lorem/words/'+ event.target.value)
+  });
+  lorem = function () {
+    document.getElementById('loremcount')
+    let count = document.getElementById('loremcount').value
+    return faketit('lorem/words/'+ count)
+  }
+  faketit =function(name, norevert) {
+    parent.postMessage({ pluginMessage: { type: 'fakeit', faker: name, norevert: norevert } }, '*')
+  }
+</script>

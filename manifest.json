@@ -1,0 +1,7 @@
+{
+  "name": "Parand",
+  "id": "805342303490221292",
+  "api": "1.0.0",
+  "main": "./dist/code.js",
+  "ui": "./dist/ui.html"
+}
