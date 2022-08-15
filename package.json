@@ -1,7 +1,7 @@
 {
   "name": "parand",
   "description": "Parand, figma plugin to generate Persian Fake Text",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "babakhani.reza@gmail.com",
   "license": "MIT",
   "main": "code.js",
@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "faker": "git+ssh://git@github.com/fariborzemami/faker.js.git"
+    "faker": "https://github.com/fariborzemami/faker.js.git"
   },
   "devDependencies": {
     "css-loader": "^3.4.2",
